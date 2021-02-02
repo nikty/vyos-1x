@@ -104,6 +104,9 @@
 {#     e.g. 192.0.2.10:3389                                                                   #}
 {%     set output = output + trns_port %}
 {%   endif %}
+{%   if config.translation.persistent is defined %}
+{%     set output = output + " persistent " %}
+{%   endif %}
 {%   if comment %}
 {%     set output = output + ' comment "' + comment + '"' %}
 {%   endif %}
